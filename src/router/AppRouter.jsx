@@ -7,12 +7,13 @@ import HomePage from '../pages/HomePage'
 export default function AppRouter() {
   return (
     <>
-      <NavbarApp />
-    
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route element={<Books />} path="/books" />
-      </Routes>
+        <NavbarApp />
+      
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route element={<Books />} path="/books" />
+        </Routes>
+
     </>
   )
 }
