@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Books() {
 
-  const books = useStoreState((state) => state.books)
-  const addBook = useStoreActions((actions) => actions.addBook)
-  const loadBook = useStoreActions((actions => actions.loadBook))
+  const books = useStoreState((state) => state.books.books)
+  const booksActions = useStoreActions((actions) => actions.books)
+
+  // const books = booksStore.books
 
   const navigate = useNavigate()
 
@@ -21,12 +22,12 @@ export default function Books() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addBook(title)
+    booksActions.addBook(title)
     setLoad(true)
   }
 
   const goToBook = useCallback((book) => {
-    loadBook(book)
+    booksActions.loadBook(book)
     // navigate(`/books/${book.title}`)
     navigate(`/books/show`)
   });

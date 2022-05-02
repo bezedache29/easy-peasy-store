@@ -6,7 +6,7 @@ export default function Book() {
 
   // const { title } = useParams();
 
-  const book = useStoreState((state) => state.book)
+  const book = useStoreState((state) => state.books.book)
 
   console.log(book)
 

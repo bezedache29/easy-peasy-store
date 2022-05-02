@@ -6,7 +6,8 @@ export default function NavbarApp() {
     <nav>
       <ul>
         <NavLink to="/">Accueil</NavLink> | 
-        <NavLink to="/books">Livres</NavLink>
+        <NavLink to="/books">Livres</NavLink> | 
+        <NavLink to="/posts">Posts API</NavLink>
       </ul>
     </nav>
   )

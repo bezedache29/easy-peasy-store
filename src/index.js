@@ -3,11 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom'
 import AppRouter from './router/AppRouter';
-import { booksStore } from './store/books';
+import GlobalStore from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StoreProvider store={booksStore}>
+  <StoreProvider store={GlobalStore}>
     <React.StrictMode>
       <Router>
         <AppRouter />
